@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Flores Amarillas</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fff8dc;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h1 {
+    color: #ffcc00;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 50px;
+  }
+
+  .flower {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 5px gold;
+  }
+</style>
+</head>
+<body>
+
+<h1>Eli te quiero demasiado 💛</h1>
+
+<script>
+function createFlower() {
+  const flower = document.createElement('div');
+  flower.classList.add('flower');
+  flower.style.left = Math.random() * window.innerWidth + 'px';
+  flower.style.top = Math.random() * window.innerHeight + 'px';
+  document.body.appendChild(flower);
+}
+
+// Crear 50 flores amarillas
+for(let i = 0; i < 50; i++) {
+  createFlower();
+}
+</script>
+
+</body>
+</html>
